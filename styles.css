@@ -168,6 +168,12 @@ li + li {
   margin-left: 6px;
   padding: 8px 14px;
   font-size: 14px;
+  color: #fff;
+}
+
+.nav .button:hover {
+  color: #fff;
+  background: var(--brand-hover);
 }
 
 /* Buttons */
