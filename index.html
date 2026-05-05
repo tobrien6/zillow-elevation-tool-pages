@@ -5,184 +5,672 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="Business, product, support, pricing, refund, cancellation, and privacy information for Atlas Software and Zillow Elevation Tool."
+      content="Zillow Elevation Tool is a Chrome extension that adds approximate elevation badges to Zillow listings. Free elevation badges, optional Pro elevation filtering."
     />
-    <title>Atlas Software | Zillow Elevation Tool</title>
+    <meta property="og:title" content="Zillow Elevation Tool" />
+    <meta
+      property="og:description"
+      content="See approximate elevation on every Zillow listing. Filter by elevation range with Pro."
+    />
+    <meta property="og:image" content="./assets/icon-512.png" />
+    <meta property="og:type" content="website" />
+    <link rel="icon" type="image/png" href="./assets/icon-128.png" />
+    <link rel="apple-touch-icon" href="./assets/icon-256.png" />
+    <title>Zillow Elevation Tool — See elevation on every Zillow listing</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
     <header class="site-header">
-      <a class="brand" href="./index.html">Atlas Software</a>
-      <nav aria-label="Primary">
-        <a href="#product">Product</a>
-        <a href="#pricing">Pricing</a>
-        <a href="#support">Support</a>
-        <a href="./privacy.html">Privacy</a>
-        <a href="./terms.html">Terms</a>
-      </nav>
+      <div class="site-header__inner">
+        <a class="brand" href="./index.html">
+          <img
+            class="brand__logo"
+            src="./assets/icon-128.png"
+            alt="Zillow Elevation Tool logo"
+          />
+          <span class="brand__name">
+            <span>Zillow Elevation Tool</span>
+            <small>by Atlas Software</small>
+          </span>
+        </a>
+        <nav class="nav" aria-label="Primary">
+          <a href="#features">Features</a>
+          <a href="#how">How it works</a>
+          <a href="#pricing">Pricing</a>
+          <a href="#support">Support</a>
+          <a href="./privacy.html">Privacy</a>
+          <a href="./terms.html">Terms</a>
+          <a class="button" href="#install">
+            <svg
+              class="icon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path d="M12 3v12" />
+              <path d="m7 10 5 5 5-5" />
+              <path d="M5 21h14" />
+            </svg>
+            Install
+          </a>
+        </nav>
+      </div>
     </header>
 
     <main>
       <section class="hero">
-        <p class="eyebrow">Business website</p>
-        <h1>Atlas Software</h1>
-        <p class="lead">
-          Atlas Software develops and sells Zillow Elevation Tool, a Chrome
-          extension that adds approximate elevation information to visible
-          Zillow listings and offers optional Pro controls for elevation-based
-          filtering.
-        </p>
-        <div class="hero-actions">
-          <a class="button" href="#pricing">View pricing</a>
-          <a class="button button-secondary" href="#support">Contact support</a>
+        <div class="container hero__inner">
+          <div class="hero__copy">
+            <span class="eyebrow"
+              ><span class="dot"></span> Chrome extension · Manifest V3</span
+            >
+            <h1>
+              See <em>elevation</em> on every Zillow listing — instantly.
+            </h1>
+            <p class="hero__lead">
+              Zillow Elevation Tool adds approximate elevation badges to visible
+              Zillow listings and labels matched map pins, so you can spot
+              hillside, valley, and waterfront properties at a glance. Pro adds
+              filter controls that auto-hide listings outside your elevation
+              range.
+            </p>
+            <div class="hero__actions">
+              <a class="button" href="#install">
+                <svg
+                  class="icon"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <circle cx="12" cy="12" r="9" />
+                  <path d="M12 3a9 9 0 0 0 0 18" />
+                  <path d="M3 12h18" />
+                </svg>
+                Add to Chrome
+              </a>
+              <a class="button button-secondary" href="#features">
+                See features
+              </a>
+            </div>
+            <div class="hero__meta">
+              <span class="hero__meta-item">
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <polyline points="5 12 10 17 19 7" />
+                </svg>
+                100 free elevation lookups / day
+              </span>
+              <span class="hero__meta-item">
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <polyline points="5 12 10 17 19 7" />
+                </svg>
+                No account required
+              </span>
+              <span class="hero__meta-item">
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <polyline points="5 12 10 17 19 7" />
+                </svg>
+                Doesn't sell your data
+              </span>
+            </div>
+          </div>
+
+          <div class="hero__art">
+            <img
+              class="hero__logo"
+              src="./assets/icon-256.png"
+              alt=""
+              aria-hidden="true"
+            />
+            <figure class="screenshot" aria-label="Product preview">
+              <div class="screenshot__chrome" aria-hidden="true">
+                <span></span><span></span><span></span>
+                <em>zillow.com — search results</em>
+              </div>
+              <div class="screenshot__body">
+                <!--
+                  REPLACE THIS PLACEHOLDER WITH A SCREENSHOT.
+                  Recommended: a Zillow search results page where multiple
+                  listing cards show their elevation badges, ideally with
+                  varied terrain visible on the map (e.g., a coastal or
+                  hilly market). Save the file as assets/screenshot-hero.png
+                  at roughly 1600x1000 and uncomment the <img> below.
+                -->
+                <!--
+                <img
+                  class="screenshot__image"
+                  src="./assets/screenshot-hero.png"
+                  alt="Zillow search results with elevation badges on each listing card"
+                />
+                -->
+                <div class="screenshot__placeholder">
+                  <strong>Screenshot goes here</strong>
+                  <span>
+                    Zillow search results page showing elevation badges on
+                    listing cards (recommended). Save as
+                    <code>assets/screenshot-hero.png</code>.
+                  </span>
+                </div>
+              </div>
+            </figure>
+          </div>
         </div>
       </section>
 
-      <section id="business" class="section">
-        <h2>Business Information</h2>
-        <div class="detail-grid">
-          <div>
-            <strong>Business name</strong>
-            <span>Atlas Software</span>
+      <section id="features" class="section">
+        <div class="container">
+          <div class="section__head">
+            <span class="eyebrow">What it does</span>
+            <h2>Everything elevation, right inside Zillow.</h2>
+            <p>
+              No new tabs, no copy-pasting coordinates into a separate map. Open
+              Zillow, scroll, see elevation. It's that simple.
+            </p>
           </div>
-          <div>
-            <strong>Operator</strong>
-            <span>Tim O'Brien</span>
-          </div>
-          <div>
-            <strong>Business type</strong>
-            <span>Digital software subscription</span>
-          </div>
-          <div>
-            <strong>Website</strong>
-            <span>tobrien6.github.io/zillow-elevation-tool-pages</span>
+
+          <div class="features">
+            <article class="feature">
+              <div class="feature__icon" aria-hidden="true">
+                <svg
+                  width="22"
+                  height="22"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="m3 17 6-6 4 4 8-8" />
+                  <path d="M14 7h7v7" />
+                </svg>
+              </div>
+              <h3>Elevation badges on every listing</h3>
+              <p>
+                A small badge appears on each visible Zillow listing card with
+                the approximate elevation in feet or meters.
+              </p>
+            </article>
+
+            <article class="feature">
+              <div class="feature__icon" aria-hidden="true">
+                <svg
+                  width="22"
+                  height="22"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M12 21s-7-6.2-7-12a7 7 0 0 1 14 0c0 5.8-7 12-7 12Z" />
+                  <circle cx="12" cy="9" r="2.5" />
+                </svg>
+              </div>
+              <h3>Matched map pin labels</h3>
+              <p>
+                When the listing is uniquely identifiable on the map, the price
+                pin gets an elevation label too — so you can browse the map
+                view with terrain context.
+              </p>
+            </article>
+
+            <article class="feature feature--green">
+              <div class="feature__icon" aria-hidden="true">
+                <svg
+                  width="22"
+                  height="22"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M3 6h18" />
+                  <path d="M6 12h12" />
+                  <path d="M10 18h4" />
+                </svg>
+              </div>
+              <h3>Pro elevation filters</h3>
+              <p>
+                Set a min and max elevation. Pro auto-hides listings outside
+                your range, keeping pending lookups visible while data
+                resolves.
+              </p>
+            </article>
+
+            <article class="feature">
+              <div class="feature__icon" aria-hidden="true">
+                <svg
+                  width="22"
+                  height="22"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <rect x="3" y="3" width="18" height="18" rx="3" />
+                  <path d="M3 10h18" />
+                  <path d="M8 3v18" />
+                </svg>
+              </div>
+              <h3>Local cache for speed</h3>
+              <p>
+                Resolved elevations are cached on your device so revisited
+                listings don't burn through your daily lookup quota.
+              </p>
+            </article>
+
+            <article class="feature">
+              <div class="feature__icon" aria-hidden="true">
+                <svg
+                  width="22"
+                  height="22"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M12 2v4" />
+                  <path d="M12 18v4" />
+                  <path d="m4.93 4.93 2.83 2.83" />
+                  <path d="m16.24 16.24 2.83 2.83" />
+                  <path d="M2 12h4" />
+                  <path d="M18 12h4" />
+                  <path d="m4.93 19.07 2.83-2.83" />
+                  <path d="m16.24 7.76 2.83-2.83" />
+                </svg>
+              </div>
+              <h3>Public elevation data</h3>
+              <p>
+                Powered by AWS Terrarium terrain tiles with a USGS EPQS
+                fallback. No proprietary or paid GIS feeds required.
+              </p>
+            </article>
+
+            <article class="feature">
+              <div class="feature__icon" aria-hidden="true">
+                <svg
+                  width="22"
+                  height="22"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <rect x="4" y="11" width="16" height="10" rx="2" />
+                  <path d="M8 11V7a4 4 0 0 1 8 0v4" />
+                </svg>
+              </div>
+              <h3>Privacy-respecting</h3>
+              <p>
+                Runs only on Zillow tabs you open. No tracking pixels, no ad
+                networks, no resale of listing data.
+              </p>
+            </article>
           </div>
         </div>
       </section>
 
-      <section id="product" class="section">
-        <h2>Product and Service Description</h2>
-        <p>
-          Atlas Software sells access to Zillow Elevation Tool, a Chrome
-          extension that runs on Zillow pages the user chooses to view. It reads
-          visible listing and map data, estimates elevation from public
-          elevation data sources, and displays elevation badges and matched map
-          labels in the browser.
-        </p>
-        <p>
-          Free users receive basic elevation display with a daily limit on new
-          elevation lookups. Pro subscribers receive elevation filter controls
-          and a higher daily lookup limit.
-        </p>
-        <p>
-          Elevation values are estimates and are not survey, engineering,
-          safety, legal, insurance, or flood-risk determinations.
-        </p>
+      <section id="how" class="section">
+        <div class="container">
+          <div class="section__head">
+            <span class="eyebrow">How it works</span>
+            <h2>Three steps. No setup beyond installing.</h2>
+          </div>
+
+          <ol class="steps" style="list-style: none; padding: 0">
+            <li class="step">
+              <h3>Install the extension</h3>
+              <p>
+                Add Zillow Elevation Tool from the Chrome Web Store. Pin it to
+                your toolbar so the popup is one click away.
+              </p>
+            </li>
+            <li class="step">
+              <h3>Browse Zillow normally</h3>
+              <p>
+                Open any Zillow search or listing page. Elevation badges
+                appear on visible cards as you scroll.
+              </p>
+            </li>
+            <li class="step">
+              <h3>Filter with Pro (optional)</h3>
+              <p>
+                Open the popup, set a min and max elevation, and listings
+                outside your range get hidden automatically.
+              </p>
+            </li>
+          </ol>
+
+          <div class="cta-banner">
+            <div>
+              <h2>Try the free tier today.</h2>
+              <p>
+                100 elevation lookups per day, no account, no credit card.
+                Upgrade only if you want filters and 10,000 lookups per day.
+              </p>
+            </div>
+            <a class="button" href="#install">
+              <svg
+                class="icon"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <circle cx="12" cy="12" r="9" />
+                <path d="M3 12h18" />
+                <path d="M12 3a9 9 0 0 0 0 18" />
+              </svg>
+              Add to Chrome
+            </a>
+          </div>
+        </div>
       </section>
 
       <section id="pricing" class="section">
-        <h2>Pricing</h2>
-        <div class="pricing-grid">
-          <article>
-            <h3>Free</h3>
-            <p class="price">$0</p>
-            <ul>
-              <li>Approximate elevation badges on visible Zillow listings</li>
-              <li>Matched map elevation labels</li>
-              <li>100 new elevation lookups per day</li>
-            </ul>
-          </article>
-          <article>
-            <h3>Pro Monthly</h3>
-            <p class="price">$6.99/month</p>
-            <ul>
-              <li>Elevation filter controls</li>
-              <li>Higher daily lookup limit</li>
-              <li>10,000 new elevation lookups per day</li>
-            </ul>
-          </article>
-          <article>
-            <h3>Pro Yearly</h3>
-            <p class="price">$49.99/year</p>
-            <ul>
-              <li>Same Pro features as monthly</li>
-              <li>Annual billing</li>
-              <li>Cancel future renewal at any time</li>
-            </ul>
-          </article>
+        <div class="container">
+          <div class="section__head">
+            <span class="eyebrow">Pricing</span>
+            <h2>Free works. Pro unlocks filtering.</h2>
+            <p>
+              Payments are processed securely by Stripe through ExtensionPay.
+              Cancel any time.
+            </p>
+          </div>
+
+          <div class="pricing-grid">
+            <article class="plan">
+              <h3>Free</h3>
+              <p class="plan__price">$0<small> forever</small></p>
+              <ul class="plan__list">
+                <li>Elevation badges on visible listings</li>
+                <li>Matched map pin labels</li>
+                <li>100 new elevation lookups per day</li>
+                <li>Local elevation cache</li>
+              </ul>
+              <a class="button button-secondary plan__cta" href="#install">
+                Add free version
+              </a>
+            </article>
+
+            <article class="plan plan--featured">
+              <span class="plan__tag">Most popular</span>
+              <h3>Pro Monthly</h3>
+              <p class="plan__price">$6.99<small> /month</small></p>
+              <ul class="plan__list">
+                <li>Everything in Free</li>
+                <li>Elevation filter controls</li>
+                <li>Auto-hide listings outside your range</li>
+                <li>10,000 new lookups per day</li>
+                <li>Cancel anytime from the popup</li>
+              </ul>
+              <a class="button plan__cta" href="#install">
+                Get Pro Monthly
+              </a>
+            </article>
+
+            <article class="plan">
+              <h3>Pro Yearly</h3>
+              <p class="plan__price">$49.99<small> /year</small></p>
+              <ul class="plan__list">
+                <li>Everything in Pro Monthly</li>
+                <li>Save ~40% vs. monthly</li>
+                <li>Annual billing</li>
+                <li>Cancel future renewal anytime</li>
+              </ul>
+              <a class="button button-secondary plan__cta" href="#install">
+                Get Pro Yearly
+              </a>
+            </article>
+          </div>
+
+          <p class="pricing-note">
+            Need to upgrade or cancel later? Open the extension popup and use
+            the Pro management link. Pro status is verified through
+            ExtensionPay.
+          </p>
         </div>
-        <p>
-          Payments are processed by Stripe through ExtensionPay. The extension
-          does not collect or store credit-card numbers.
-        </p>
+      </section>
+
+      <section id="install" class="section section--tight">
+        <div class="container">
+          <div class="section__head">
+            <span class="eyebrow">Install</span>
+            <h2>Add Zillow Elevation Tool to Chrome.</h2>
+            <p>
+              Available on the Chrome Web Store. Works on any Chromium browser
+              that supports Manifest V3 extensions.
+            </p>
+          </div>
+          <div class="hero__actions">
+            <a class="button" href="#" aria-label="Open Chrome Web Store listing">
+              <svg
+                class="icon"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <circle cx="12" cy="12" r="9" />
+                <path d="M3 12h18" />
+                <path d="M12 3a9 9 0 0 0 0 18" />
+              </svg>
+              Open Chrome Web Store
+            </a>
+            <a class="button button-secondary" href="#features">
+              Review features
+            </a>
+          </div>
+          <p class="disclaimer" style="max-width: 760px">
+            Elevation values are estimates derived from public elevation data.
+            They are not survey, engineering, safety, legal, insurance, or
+            flood-risk determinations. Atlas Software and Zillow Elevation Tool
+            are independent and are not affiliated with Zillow Group.
+          </p>
+        </div>
+      </section>
+
+      <section id="faq" class="section">
+        <div class="container">
+          <div class="section__head">
+            <span class="eyebrow">FAQ</span>
+            <h2>Common questions.</h2>
+          </div>
+
+          <div class="faq">
+            <details>
+              <summary>How accurate are the elevation values?</summary>
+              <p>
+                Elevation is sampled from public terrain data (AWS Terrarium
+                tiles with USGS EPQS fallback) at the listing's coordinates.
+                Expect typical accuracy within a few meters in well-mapped
+                areas. Use it for relative comparisons between listings, not
+                for survey-grade decisions.
+              </p>
+            </details>
+            <details>
+              <summary>Does it work on every Zillow page?</summary>
+              <p>
+                It works on Zillow search results, map view, and individual
+                listing detail pages. Listings without coordinates available
+                in the page or map data show a "coordinates unavailable"
+                state — they are not geocoded by default to keep your daily
+                lookup quota meaningful.
+              </p>
+            </details>
+            <details>
+              <summary>What does "lookups per day" mean?</summary>
+              <p>
+                A "lookup" is a new elevation request the extension hasn't
+                cached yet. Cached results don't count, so revisiting the same
+                listing is free. Quotas reset by UTC date.
+              </p>
+            </details>
+            <details>
+              <summary>Is my browsing tracked?</summary>
+              <p>
+                No. The extension only runs on Zillow tabs you open, only sends
+                coordinates to public elevation providers to fetch elevation
+                values, and stores cache and settings locally in Chrome
+                extension storage. See the
+                <a href="./privacy.html">privacy policy</a> for details.
+              </p>
+            </details>
+            <details>
+              <summary>How do I cancel Pro?</summary>
+              <p>
+                Open the extension popup and use the Pro management link.
+                Cancellation prevents future renewal. For refund questions,
+                email
+                <a href="mailto:tobrien6@gmail.com">tobrien6@gmail.com</a>.
+              </p>
+            </details>
+          </div>
+        </div>
       </section>
 
       <section id="support" class="section">
-        <h2>Customer Support</h2>
-        <p>
-          For support, billing questions, refund requests, cancellation help, or
-          privacy questions, email
-          <a href="mailto:tobrien6@gmail.com">tobrien6@gmail.com</a>.
-        </p>
-        <p>
-          Please include the browser you use, a short description of the issue,
-          and whether the request is about Free or Pro access.
-        </p>
-      </section>
-
-      <section id="policies" class="section">
-        <h2>Policies</h2>
-        <div class="policy-list">
-          <article>
-            <h3>Refunds and Disputes</h3>
+        <div class="container">
+          <div class="section__head">
+            <span class="eyebrow">Support &amp; business</span>
+            <h2>We're a small team. We answer email.</h2>
             <p>
-              Refund requests are reviewed case by case. If Pro does not work as
-              expected, contact support with the payment email and issue
-              details. Customers should contact support before filing a payment
-              dispute so the issue can be reviewed.
+              For support, billing, refunds, cancellation help, or privacy
+              questions, email
+              <a href="mailto:tobrien6@gmail.com">tobrien6@gmail.com</a>.
+              Please include your browser, a short description of the issue,
+              and whether the request is about Free or Pro access.
             </p>
-          </article>
-          <article>
-            <h3>Cancellation</h3>
-            <p>
-              Pro subscriptions can be managed or canceled through the Pro
-              management link in the extension. Canceling prevents future
-              renewal but does not automatically refund prior charges.
-            </p>
-          </article>
-          <article>
-            <h3>Returns and Shipping</h3>
-            <p>
-              Zillow Elevation Tool is digital software. No physical goods are
-              sold, shipped, or returned.
-            </p>
-          </article>
-          <article>
-            <h3>Legal and Export Restrictions</h3>
-            <p>
-              The extension may not be used where prohibited by law, sanctions,
-              export controls, platform rules, or payment processor rules.
-            </p>
-          </article>
-          <article>
-            <h3>Promotions</h3>
-            <p>
-              There are no active promotions. If promotions are offered later,
-              eligibility, price, duration, renewal terms, and restrictions will
-              be stated where the promotion is presented.
-            </p>
-          </article>
+          </div>
+          <div class="detail-grid">
+            <div>
+              <strong>Business</strong>
+              <span>Atlas Software</span>
+            </div>
+            <div>
+              <strong>Operator</strong>
+              <span>Tim O'Brien</span>
+            </div>
+            <div>
+              <strong>Business type</strong>
+              <span>Digital software subscription</span>
+            </div>
+            <div>
+              <strong>Contact</strong>
+              <span>tobrien6@gmail.com</span>
+            </div>
+          </div>
         </div>
-        <p>
-          Read the full <a href="./terms.html">Terms and Refund Policy</a> and
-          <a href="./privacy.html">Privacy Policy</a>.
-        </p>
       </section>
-
-      <p class="muted">
-        Atlas Software and Zillow Elevation Tool are independent and are not
-        affiliated with Zillow Group.
-      </p>
     </main>
+
+    <footer class="site-footer">
+      <div class="container site-footer__inner">
+        <div class="site-footer__brand">
+          <a class="brand" href="./index.html">
+            <img
+              class="brand__logo"
+              src="./assets/icon-128.png"
+              alt="Zillow Elevation Tool logo"
+            />
+            <span class="brand__name">
+              <span>Zillow Elevation Tool</span>
+              <small>by Atlas Software</small>
+            </span>
+          </a>
+          <p>
+            Approximate elevation badges for Zillow listings, with optional
+            elevation-range filtering for Pro subscribers. Independent and
+            not affiliated with Zillow Group.
+          </p>
+        </div>
+        <div>
+          <h4>Product</h4>
+          <ul>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#how">How it works</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#faq">FAQ</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#support">Support</a></li>
+            <li><a href="./privacy.html">Privacy policy</a></li>
+            <li><a href="./terms.html">Terms &amp; refunds</a></li>
+            <li>
+              <a href="mailto:tobrien6@gmail.com">tobrien6@gmail.com</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="container site-footer__legal">
+        <span>© 2026 Atlas Software. All rights reserved.</span>
+        <span>
+          Zillow is a registered trademark of Zillow Group. This product is
+          independent and not affiliated with or endorsed by Zillow Group.
+        </span>
+      </div>
+    </footer>
   </body>
 </html>
