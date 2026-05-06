@@ -263,8 +263,8 @@ li + li {
 .hero__inner {
   position: relative;
   display: grid;
-  grid-template-columns: 1fr 1.3fr;
-  gap: 48px;
+  grid-template-columns: 1fr 1.15fr;
+  gap: 52px;
   align-items: center;
 }
 
