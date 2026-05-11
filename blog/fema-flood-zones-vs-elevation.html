@@ -1,0 +1,528 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="FEMA flood zones describe neighborhood-scale risk categories. Measured elevation is a single-point reading. Here's how they differ, where each one is sharp, and how to read them together."
+    />
+    <meta
+      property="og:title"
+      content="FEMA flood zones vs. measured elevation: what each one tells you"
+    />
+    <meta
+      property="og:description"
+      content="Flood zones answer a categorical question about a neighborhood. Elevation answers a precise question about one lot. Together they tell a story neither tells alone."
+    />
+    <meta property="og:image" content="../assets/icon-512.png" />
+    <meta property="og:type" content="article" />
+    <link rel="icon" type="image/png" href="../assets/icon-128.png" />
+    <link rel="apple-touch-icon" href="../assets/icon-256.png" />
+    <title>
+      FEMA flood zones vs. measured elevation — Zillow Elevation Tool
+    </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a class="brand" href="../index.html">
+          <img
+            class="brand__logo"
+            src="../assets/icon-128.png"
+            alt="Zillow Elevation Tool logo"
+          />
+          <span class="brand__name">
+            <span>Zillow Elevation Tool</span>
+            <small>by Atlas Software</small>
+          </span>
+        </a>
+        <nav class="nav" aria-label="Primary">
+          <a href="../index.html#features">Features</a>
+          <a href="../index.html#how">How it works</a>
+          <a href="../index.html#pricing">Pricing</a>
+          <a href="./index.html">Blog</a>
+          <a href="../index.html#support">Support</a>
+          <a href="../privacy.html">Privacy</a>
+          <a href="../terms.html">Terms</a>
+          <a
+            class="button"
+            href="https://chromewebstore.google.com/detail/zillow-elevation-tool/dmpjffcgdpofpeaempmdllbeinfokogc"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <svg
+              class="icon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path d="M12 3v12" />
+              <path d="m7 10 5 5 5-5" />
+              <path d="M5 21h14" />
+            </svg>
+            Install
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <section class="post-hero">
+      <div class="container">
+        <div class="post-hero__inner">
+          <a class="post-back" href="./index.html">
+            <svg
+              width="14"
+              height="14"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path d="m15 18-6-6 6-6" />
+            </svg>
+            Back to blog
+          </a>
+          <span class="eyebrow" style="margin-top: 14px"
+            >Flood risk · Buying guide</span
+          >
+          <h1>
+            FEMA flood zones vs. measured elevation: what each one tells you.
+          </h1>
+          <p class="post-hero__lead">
+            FEMA flood zones describe risk categories drawn at neighborhood
+            scale. Elevation is a single-point reading on the lot. They answer
+            two different questions — and the houses that surprise buyers
+            usually have a quiet conflict between the two.
+          </p>
+          <div class="post-meta">
+            <span class="post-meta__avatar" aria-hidden="true">A</span>
+            <span>Atlas Software</span>
+            <span class="post-meta__divider" aria-hidden="true"></span>
+            <time datetime="2026-05-11">May 11, 2026</time>
+            <span class="post-meta__divider" aria-hidden="true"></span>
+            <span>8 min read</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <main class="post-body">
+      <article class="container">
+        <h2>The short version</h2>
+        <p>
+          A FEMA flood zone tells you which statistical risk bracket a
+          neighborhood falls into. An elevation reading tells you, in feet,
+          where one specific lot sits in the terrain. The first answer is
+          categorical and regulatory. The second is geometric and physical.
+          Most of the value comes from reading them together — and noticing
+          when they disagree.
+        </p>
+
+        <h2>What a FEMA flood zone actually is</h2>
+        <p>
+          FEMA publishes Flood Insurance Rate Maps (FIRMs) that divide the
+          country into zones based on modeled flood probability. The labels
+          you'll see on a listing report or insurance quote are usually one of
+          these:
+        </p>
+        <ul>
+          <li>
+            <strong>Zone X (unshaded).</strong> Minimal flood hazard. Outside
+            both the 1%-annual-chance and 0.2%-annual-chance floodplains.
+          </li>
+          <li>
+            <strong>Zone X (shaded), sometimes labeled "X500."</strong>
+            Moderate hazard. Inside the 0.2%-annual-chance ("500-year") zone
+            but outside the 1% zone.
+          </li>
+          <li>
+            <strong>Zone A.</strong> Inside the 1%-annual-chance zone, but no
+            detailed engineering study has been completed, so no Base Flood
+            Elevation is published for the area.
+          </li>
+          <li>
+            <strong>Zone AE (and AH, AO).</strong> Inside the 1%-annual-chance
+            zone with a detailed study and a published Base Flood Elevation.
+            AH and AO cover shallow flooding scenarios (ponding and
+            sheet-flow).
+          </li>
+          <li>
+            <strong>Zone V or VE.</strong> Coastal zones exposed to wave action
+            in addition to inundation. VE includes a published BFE.
+          </li>
+        </ul>
+        <p>
+          Together, Zones A and V make up the
+          <strong>Special Flood Hazard Area</strong> (SFHA). If a federally
+          backed mortgage touches an SFHA property, the lender will require
+          flood insurance. That single regulatory consequence is why the zone
+          letter ends up driving so much of the conversation.
+        </p>
+
+        <h2>What a measured elevation is</h2>
+        <p>
+          An elevation reading is a single number: the height of a point on
+          the earth's surface above a reference (usually mean sea level),
+          measured in feet or meters. The Zillow Elevation Tool extension
+          samples this from public terrain data at the listing's coordinates.
+          A few properties of an elevation reading worth keeping in mind:
+        </p>
+        <ul>
+          <li>
+            <strong>It's a point, not a polygon.</strong> The reading describes
+            one location — typically the center of the parcel as recorded in
+            the listing — not the whole lot.
+          </li>
+          <li>
+            <strong>It's instantaneous in time.</strong> Terrain data updates
+            on a much faster cadence than FEMA map revisions.
+          </li>
+          <li>
+            <strong>It carries no risk interpretation.</strong> "47 feet" is a
+            geometry, not a verdict. It becomes meaningful only when you
+            compare it to nearby water sources, the BFE, or neighboring lots.
+          </li>
+        </ul>
+
+        <div class="post-callout">
+          <strong>Different questions, different sharpness</strong>
+          <p>
+            Zone is sharp when you ask "is this neighborhood subject to
+            federal flood insurance requirements?" Elevation is sharp when you
+            ask "does this lot sit above or below the houses around it?"
+          </p>
+        </div>
+
+        <h2>How the zones get drawn (and why they're coarse at the lot level)</h2>
+        <p>
+          FIRMs are produced from hydrologic and hydraulic engineering
+          studies: precipitation records, stream gauge data, watershed
+          modeling, coastal storm surge simulations. The output is a
+          probability surface that gets simplified into mapped polygons. That
+          simplification is necessary — you can't enforce insurance rules
+          against a continuous probability function — but it has consequences:
+        </p>
+        <ul>
+          <li>
+            <strong>Boundaries are drawn coarsely.</strong> A lot just inside
+            the SFHA line and one just outside can have nearly identical
+            actual exposure. The line is regulatory, not physical.
+          </li>
+          <li>
+            <strong>Maps lag the landscape.</strong> Some panels are decades
+            old. New development upstream, channelization, levees built or
+            decertified, and shifting precipitation patterns can all move
+            real-world risk faster than maps catch up.
+          </li>
+          <li>
+            <strong>Pluvial flooding is under-represented.</strong> A lot of
+            the most expensive damage in any given year comes from urban
+            stormwater overwhelming drainage — rain-driven, not river-driven.
+            FIRMs were not originally designed to capture this, and many
+            jurisdictions still don't map it.
+          </li>
+          <li>
+            <strong>Map appeals exist for a reason.</strong> Owners regularly
+            file Letters of Map Amendment (LOMA) showing their structure sits
+            above the BFE despite being inside the zone polygon. The
+            adjustments happen because the polygon was always an
+            approximation.
+          </li>
+        </ul>
+
+        <h2>Where elevation fills the gap</h2>
+        <p>
+          Measured elevation gives you a continuous, lot-level reading you can
+          compare to anything else — the nearest water source, the BFE, the
+          neighboring parcel. It doesn't replace the zone. It puts a number on
+          the part the zone smoothed over.
+        </p>
+        <p>The combinations that matter most to a buyer:</p>
+        <ul>
+          <li>
+            <strong>Zone X, low elevation, near a drainage path.</strong> The
+            zone says minimal hazard. The terrain says this lot collects water
+            from a wide area. Pluvial events and minor drainage failures hit
+            here first. Worth investigating.
+          </li>
+          <li>
+            <strong>Zone AE, high elevation on the lot.</strong> The zone
+            triggers flood insurance because the polygon includes this
+            address, but the structure may sit well above the published BFE.
+            An elevation certificate from a surveyor can substantially reduce
+            premiums — and the elevation reading is what tells you it might be
+            worth getting one.
+          </li>
+          <li>
+            <strong>Zone X, in a depression inside an otherwise high
+            neighborhood.</strong> Map view plus elevation labels reveal this
+            in seconds. The zone won't.
+          </li>
+          <li>
+            <strong>Zone A, no published BFE.</strong> The map says "yes,
+            risk" without saying how much. A relative elevation read against
+            the nearest water source is the cheapest way to start sizing the
+            question.
+          </li>
+        </ul>
+
+        <div class="post-inline-cta">
+          <div>
+            <h3>See lot-level elevation while you browse Zillow.</h3>
+            <p>
+              Free elevation badges on every listing card, plus map-pin
+              labels so you can read terrain at a glance.
+            </p>
+          </div>
+          <a
+            class="button"
+            href="https://chromewebstore.google.com/detail/zillow-elevation-tool/dmpjffcgdpofpeaempmdllbeinfokogc"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Add to Chrome — Free
+          </a>
+        </div>
+
+        <h2>The Base Flood Elevation, in one paragraph</h2>
+        <p>
+          In zones with a detailed study (AE, AH, AO, VE), FEMA publishes a
+          <strong>Base Flood Elevation</strong>: the height floodwater is
+          expected to reach during a 1%-annual-chance event. Insurance,
+          building code, and lender requirements care most about the
+          relationship between a structure's lowest finished floor and the
+          local BFE. A property whose floor sits two feet above the BFE prices
+          very differently than one whose floor sits two feet below it. The
+          zone letter alone doesn't tell you which one you're looking at.
+          Elevation, plus a quick BFE lookup, gets you most of the way there
+          before you ever pay for a survey.
+        </p>
+
+        <h2>A two-minute workflow before you tour</h2>
+        <ol>
+          <li>
+            <strong>Scan elevation while you scroll.</strong> Each Zillow
+            search result gets an elevation badge. Note which ones look low
+            for their neighborhood.
+          </li>
+          <li>
+            <strong>Check the map view for context.</strong> Matched map pins
+            get elevation labels. Hilltops, valleys, and depressed lots become
+            visible patterns instead of guesses.
+          </li>
+          <li>
+            <strong>Cross-reference with FEMA.</strong> FEMA's
+            <a
+              href="https://msc.fema.gov/portal/home"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Flood Map Service Center</a
+            >
+            lets you look up the official zone for any U.S. address. Pair the
+            zone letter with the elevation you already have.
+          </li>
+          <li>
+            <strong>Pull a quick insurance quote on serious candidates.</strong>
+            The premium is the most concrete signal about how risk is being
+            priced. If quotes come back high on a "low risk" zone, the
+            terrain is probably telling you something the polygon missed.
+          </li>
+          <li>
+            <strong>Filter the rest out.</strong> Pro elevation filters
+            auto-hide listings below the floor you set. That keeps the rest of
+            your search clean while you focus on the candidates that already
+            passed the basic check.
+          </li>
+        </ol>
+
+        <blockquote>
+          The zone tells you what kind of question to ask. Elevation tells
+          you whether the answer might surprise you.
+        </blockquote>
+
+        <h2>Common misreads</h2>
+        <ul>
+          <li>
+            <strong>"Zone X means no flood risk."</strong> Zone X means low
+            mapped flood risk. Roughly a quarter of NFIP claims, in any given
+            year, come from properties outside the high-risk zones.
+          </li>
+          <li>
+            <strong>"500-year flood means once every 500 years."</strong> It
+            means a 0.2% chance of occurring in any single year. Two of them
+            in a decade is unlikely but not contradictory.
+          </li>
+          <li>
+            <strong>"Higher elevation always wins."</strong> A higher lot can
+            still be in a runoff path, sit downhill from a failing retaining
+            wall, or have its lowest finished floor below the BFE because of
+            grade differences across the parcel. Elevation is necessary, not
+            sufficient.
+          </li>
+          <li>
+            <strong>"The seller would have to disclose it."</strong>
+            Disclosure rules vary by state and are often narrower than buyers
+            expect — and they don't apply to risks the seller doesn't know
+            about. The zone and the elevation are both publicly checkable.
+            Check them.
+          </li>
+        </ul>
+
+        <h2>What neither tool gives you</h2>
+        <p>
+          Zone and elevation together still don't tell you a few things that
+          matter. Before closing on any property where flood exposure is in
+          play:
+        </p>
+        <ul>
+          <li>
+            Check for historical losses or claims (CLUE report or a direct
+            ask to the seller).
+          </li>
+          <li>
+            Look at the on-lot drainage with an inspector — grading toward or
+            away from the foundation, gutter discharge, sump configuration.
+          </li>
+          <li>
+            Ask immediate neighbors. Three minutes of talking on a sidewalk
+            beats any map.
+          </li>
+          <li>
+            For mapped-zone properties, request the elevation certificate
+            from the seller. If they don't have one, a survey costs less than
+            most surprises.
+          </li>
+        </ul>
+
+        <p>
+          For the broader case on why this number is worth running first,
+          see our earlier post:
+          <a href="./flood-risk-elevation.html"
+            >why elevation is the first flood-risk number to check</a
+          >.
+        </p>
+
+        <p class="post-disclaimer">
+          Elevation values shown by the extension are approximate, derived
+          from public terrain data. They are not survey, engineering, safety,
+          insurance, or flood-risk determinations. Zone information from
+          FEMA's Flood Map Service Center is the authoritative source for
+          regulatory flood zone determinations. Always verify with FEMA flood
+          maps, a licensed inspector, and your insurer before making a
+          purchase decision.
+        </p>
+
+        <section class="post-footer-cta">
+          <h2>Read elevation and zone the way they were meant to be read — together.</h2>
+          <p>
+            Install Zillow Elevation Tool to see elevation on every listing
+            card as you browse. Cross-reference with FEMA's flood map when a
+            property gets serious. Filter out the floor you don't want to
+            consider with Pro.
+          </p>
+          <div class="hero__actions">
+            <a
+              class="button"
+              href="https://chromewebstore.google.com/detail/zillow-elevation-tool/dmpjffcgdpofpeaempmdllbeinfokogc"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <svg
+                class="icon"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <circle cx="12" cy="12" r="9" />
+                <path d="M12 3a9 9 0 0 0 0 18" />
+                <path d="M3 12h18" />
+              </svg>
+              Add to Chrome — Free
+            </a>
+            <a class="button button-secondary" href="../index.html#pricing">
+              Compare Free vs. Pro
+            </a>
+          </div>
+        </section>
+      </article>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container site-footer__inner">
+        <div class="site-footer__brand">
+          <a class="brand" href="../index.html">
+            <img
+              class="brand__logo"
+              src="../assets/icon-128.png"
+              alt="Zillow Elevation Tool logo"
+            />
+            <span class="brand__name">
+              <span>Zillow Elevation Tool</span>
+              <small>by Atlas Software</small>
+            </span>
+          </a>
+          <p>
+            Approximate elevation badges for Zillow listings, with optional
+            elevation-range filtering for Pro subscribers. Independent and not
+            affiliated with Zillow Group.
+          </p>
+        </div>
+        <div>
+          <h4>Product</h4>
+          <ul>
+            <li><a href="../index.html#features">Features</a></li>
+            <li><a href="../index.html#how">How it works</a></li>
+            <li><a href="../index.html#pricing">Pricing</a></li>
+            <li><a href="./index.html">Blog</a></li>
+            <li>
+              <a
+                href="https://chromewebstore.google.com/detail/zillow-elevation-tool/dmpjffcgdpofpeaempmdllbeinfokogc"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Chrome Web Store</a
+              >
+            </li>
+            <li><a href="../index.html#faq">FAQ</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <ul>
+            <li><a href="../index.html#support">Support</a></li>
+            <li><a href="../privacy.html">Privacy policy</a></li>
+            <li><a href="../terms.html">Terms &amp; refunds</a></li>
+            <li>
+              <a href="mailto:tobrien6@gmail.com">tobrien6@gmail.com</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="container site-footer__legal">
+        <span>© 2026 Atlas Software. All rights reserved.</span>
+        <span>
+          Zillow is a registered trademark of Zillow Group. This product is
+          independent and not affiliated with or endorsed by Zillow Group.
+        </span>
+      </div>
+    </footer>
+  </body>
+</html>
